@@ -5,6 +5,9 @@
         <ul>
             <li v-for="n in 5">{{ n }}</li>
         </ul>
+		ÐÕÃû£º{{name}}
+		<input type="text" v-model="name" />
+		<button v-on:click="show()">µã»÷</button>
     </div>
 </template>
 
@@ -12,9 +15,16 @@
 export default {
     data () {
         return {
-            msg: 'Hello World!'
+            msg: 'Hello World!',
+			name:'phc'
         }
-    }
+    },
+	methods:{
+		show()
+		{
+		   alert('123');
+		}
+	}
 }
 </script>
 

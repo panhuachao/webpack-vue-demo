@@ -7567,13 +7567,22 @@ setTimeout(function () {
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ exports["a"] = {
-    data() {
-        return {
-            msg: 'Hello World!'
-        };
-    }
+				data() {
+								return {
+												msg: 'Hello World!',
+												name: 'phc'
+								};
+				},
+				methods: {
+								show() {
+												alert('123');
+								}
+				}
 };
 
 /***/ },
@@ -7971,7 +7980,32 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     }
   }, [_c('h1', [_vm._v(_vm._s(_vm.msg))]), _vm._v(" "), _c('ul', _vm._l((5), function(n) {
     return _c('li', [_vm._v(_vm._s(n))])
-  }))])
+  })), _vm._v("\n\t\t������" + _vm._s(_vm.name) + "\n\t\t"), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.name),
+      expression: "name"
+    }],
+    attrs: {
+      "type": "text"
+    },
+    domProps: {
+      "value": (_vm.name)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.name = $event.target.value
+      }
+    }
+  }), _vm._v(" "), _c('button', {
+    on: {
+      "click": function($event) {
+        _vm.show()
+      }
+    }
+  }, [_vm._v("����")])])
 }
 var staticRenderFns = []
 render._withStripped = true
